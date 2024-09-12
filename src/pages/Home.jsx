@@ -91,15 +91,15 @@ function Home() {
 				<div className='h-auto w-auto space-x-2 flex justify-center bg-slate-200 rounded-xl p-2'>
 
 				<img
-					src='public\screenshot1.jpg'
+					src='/public/screenshot1.jpg'
 					className='h-96 rounded-lg'
 					/>
 									<img
-					src='public\screenshot2.jpg'
+					src='/public/screenshot2.jpg'
 					className='h-96 rounded-lg'
 					/>
 													<img
-					src='public\screenshot3.jpg'
+					src='/public/screenshot3.jpg'
 					className='h-96 rounded-lg'
 					/>
 				</div>
