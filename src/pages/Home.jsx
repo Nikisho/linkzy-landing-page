@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-scroll';
 import CurrencyPoundIcon from '@mui/icons-material/CurrencyPound';
 import PaymentsIcon from '@mui/icons-material/Payments';
 import FoodBankIcon from '@mui/icons-material/FoodBank';
@@ -8,7 +7,6 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
 import { Collapse } from '@mui/material';
 // import CardComponentCollapse from '../components/CardComponentCollapse';
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
 function Home() {
 	const delay = (ms) => new Promise(res => setTimeout(res, ms));
