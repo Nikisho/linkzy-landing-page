@@ -53,20 +53,60 @@
     .email-form button:hover {
       background-color: #218838;
     }
+
+    .thank-you-message {
+      display: none;
+      text-align: center;
+      font-size: 18px;
+      color: #28a745;
+      margin-top: 20px;
+    }
+
+    .backhome {
+        margin-top: 20px;
+    }
   </style>
 </head>
 <body>
 
   <div class="email-form">
     <h2>Ask for your data to be removed</h2>
-    <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+    <form id="dataRemovalForm">
 
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" placeholder="Your Email" required>
 
       <button type="submit">Send Request</button>
     </form>
+    <div class="thank-you-message" id="thankYouMessage">
+      Thanks for sending your request!
+    </div>
+
+    <div class="backhome">
+        <a  href="/">
+            Back to home page
+        </a>
+    </div>
+
   </div>
+
+  <script>
+    document.getElementById('dataRemovalForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the form from submitting the traditional way
+
+      var emailInput = document.getElementById('email');
+      var emailValue = emailInput.value;
+
+      if (emailInput.checkValidity()) {
+        // Hide the form
+        emailInput.style.display = 'none';
+        document.querySelector('button').style.display = 'none';
+
+        // Show the thank you message
+        document.getElementById('thankYouMessage').style.display = 'block';
+      }
+    });
+  </script>
 
 </body>
 </html>

@@ -76,19 +76,36 @@ function Home() {
 					</div>
 				</div>
 
-				<div className='grid grid-cols-2 self-center place-items-center md:mt-12 space-y-2 w-full
+				{/* <div className='grid grid-cols-2 self-center place-items-center md:mt-12 space-y-2 w-full
 								gap-y-4
 								md:grid-cols-3 md:w-full lg:space-y-0 lg:gap-y-4
 								xl:grid-cols-3 xl:w-1/2 
 								2xl:w-1/2
-                '>
+                '> */}
 					{/* {
 						cards?.map((card) => (
 							<CardComponentCollapse bool={open} Icon={card.icon} text={card.text} />
 						))
 					} */}
 
+
+				{/* </div> */}
+				<div className='h-auto w-auto space-x-2 flex justify-center bg-slate-200 rounded-xl p-2'>
+
+				<img
+					src='public\screenshot1.jpg'
+					className='h-96 rounded-lg'
+					/>
+									<img
+					src='public\screenshot2.jpg'
+					className='h-96 rounded-lg'
+					/>
+													<img
+					src='public\screenshot3.jpg'
+					className='h-96 rounded-lg'
+					/>
 				</div>
+				
 			</div>
 			{/* <div className='w-full justify-center flex flex-col items-center space-y-1'>
 				<p className='font-semibold text-xl'>See demo</p>
