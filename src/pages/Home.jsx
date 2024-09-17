@@ -48,10 +48,10 @@ function Home() {
 		}
 	]
 	return (
-		<div className='h-auto xl:h-screen flex flex-col items-center space-y-5 xl:space-y-0 '>
-			<div className="items-center h-5/6 justify-center flex flex-col space-y-2  xl:flex-row 2xl:w-2/3 ">
+		<div className='h-auto xl:h-screen flex flex-col items-center space-y-5 xl:space-y-0  '>
+			<div className="items-center justify-center flex flex-col space-y-2  xl:flex-row 2xl:w-2/3 xl:py-14 ">
 
-				<div className='w-full xl:w-1/2 px-5 '>
+				<div className='w-full xl:w-1/2  '>
 
 					<div className=' font-sans text-7xl my-5 text-[#20444c]'>
 						<strong>Linkzy</strong>
@@ -62,48 +62,34 @@ function Home() {
 
 							<div className=' text-xl xl:px-0 font-sans space-y-1 mx-1 self-center xl:w-4/5'>
 
-							Finding and keeping close friendships gets 
-							harder as life gets busier? From drifting apart to missing out on plans, 
-							staying connected shouldn’t feel like a challenge.
+								Finding and keeping close friendships gets
+								harder as life gets busier? From drifting apart to missing out on plans,
+								staying connected shouldn’t feel like a challenge.
 
-							Linkzy changes the game. 
-							We make it easier to stay in touch, 
-							plan events, and share memories, so you never lose sight of what truly matters—your friendships.
+								Linkzy changes the game.
+								We make it easier to stay in touch,
+								plan events, and share memories, so you never lose sight of what truly matters—your friendships.
 							</div>
 						</Collapse>
 					</div>
 				</div>
 
-				{/* <div className='grid grid-cols-2 self-center place-items-center md:mt-12 space-y-2 w-full
-								gap-y-4
-								md:grid-cols-3 md:w-full lg:space-y-0 lg:gap-y-4
-								xl:grid-cols-3 xl:w-1/2 
-								2xl:w-1/2
-                '> */}
-					{/* {
-						cards?.map((card) => (
-							<CardComponentCollapse bool={open} Icon={card.icon} text={card.text} />
-						))
-					} */}
+				<div className=' h-auto w-auto space-x-2 flex flex-col xl:flex-row justify-center bg-slate-200 rounded-xl xl:p-2'>
 
-
-				{/* </div> */}
-				<div className='h-auto w-auto space-x-2 flex justify-center bg-slate-200 rounded-xl p-2'>
-
-				<img
-					src={"/static/screenshot1.png"}
-					className='h-96 rounded-lg'
+					<img
+						src={"/static/screenshot1.png"}
+						className='w-full xl:h-96 rounded-lg'
 					/>
-									<img
-					src={"/static/screenshot2.png"}
-					className='h-96 rounded-lg'
+					<img
+						src={"/static/screenshot2.png"}
+						className='w-full xl:h-96 rounded-lg'
 					/>
-													<img
-					src={"/static/screenshot3.png"}
-					className='h-96 rounded-lg'
+					<img
+						src={"/static/screenshot3.png"}
+						className='w-full xl:h-96 rounded-lg'
 					/>
 				</div>
-				
+
 			</div>
 			{/* <div className='w-full justify-center flex flex-col items-center space-y-1'>
 				<p className='font-semibold text-xl'>See demo</p>
