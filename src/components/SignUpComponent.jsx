@@ -24,7 +24,7 @@ const SignUpComponent = () => {
             console.log(error.code);
             console.error(error.message);
             if (error.code === 23505) {
-                alert("You've already sign up!")
+                alert("You're already signed up!")
             }
             setIsSubmitting(false);
             return;
