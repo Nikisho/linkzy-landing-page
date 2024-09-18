@@ -21,7 +21,6 @@ const SignUpComponent = () => {
         const { error } = await supabase.from('email-list').insert({ email: email });
 
         if (error) {
-            console.log(error.code);
             console.error(error.message);
             if (error.code === 23505) {
                 alert("You're already signed up!")
