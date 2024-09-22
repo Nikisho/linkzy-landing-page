@@ -40,17 +40,15 @@ function ThirdScroll() {
                 {/* Promotional Copy */}
                 <div className='w-full xl:h-auto xl:w-2/3  flex flex-col justify-center px-5 py-5 xl:p-0'>
                     {appBenefits.map((object) => (
-                        <div className='my-2 flex items-center space-x-5 xl:ml-8 '>
-                            <div className='p-3 rounded-lg bg-[#76b5c5] shadow-lg '>
+                        <div className='my-2 flex xl:items-center space-x-5 xl:ml-8 '>
+                            <div className='p-3 rounded-lg bg-[#76b5c5] shadow-lg h-1/2 xl:h-auto'>
                                 {object.icon}
                             </div>
-
                             <div>
-
-                                <div className='text-2xl '>
+                                <div className='xl:text-2xl font-bold'>
                                     {object.mainContent}
                                 </div>
-                                <div className='text-xl'>
+                                <div className='xl:text-xl'>
                                     {object.subContent}
                                 </div>
                             </div>
