@@ -21,7 +21,7 @@ function SecondScroll() {
                             <Link className='rounded-full shadow-xl font-semibold h-11 w-11 flex justify-center items-center animate-pulse bg-cyan-500 hover:scale-95 hover:cursor-pointer transition duration-700'
                                 to="thirdscroll"
                                 smooth={true}
-                                duration={700}
+                                duration={900}
                             // style={{ width: '10' }}
                             >
                                 <ArrowDownwardIcon

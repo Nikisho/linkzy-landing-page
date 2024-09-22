@@ -1,6 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
+import MenuIcon from '@mui/icons-material/Menu';
 
 export default function Header() {
+    const [openMenu, setOpenMenu] = useState(false);
+    const menuOptions = [
+        {
+            link: '/privacypolicy.html',
+            text: 'Privacy policy'
+        },
+        {
+            link: '/deletedata.html',
+            text: 'Delete your data'
+        },
+    ]
     return (
         <div className='flex flex-row space-x-4 w-full  xl:px-10  items-center py-4 px-3 '>
             <div className=''>
@@ -9,23 +21,45 @@ export default function Header() {
                     <strong>Linkzy</strong>
                 </h1>
             </div>
-            <div className='flex flex-row space-x-4 items-center text-white font-semibold justify-end w-full'>
+            <div className='hidden xl:flex flex-row space-x-4 items-center text-white font-semibold justify-end w-full'>
 
-                <a
-                    href='/privacypolicy.html'
-                    className='rounded-full bg-[#20444c] shadow-xl px-4 p-2 hover:scale-95 transition duration-700'>
-                    Privacy policy
-                </a>
-                <a
-                    href='/deletedata.html'
-                    className='rounded-full bg-[#20444c] shadow-xl px-4 p-2 hover:scale-95 transition duration-700'>
-                    Delete your data
-                </a>
-                {/* <div className='rounded-full bg-[#20444c] shadow-xl px-4 p-3 hover:scale-95 transition duration-700' >
-                    About
-                </div> */}
+                {
+                    menuOptions.map((menuOption) => (
+                        <a
+                            href={menuOption.link}
+                            className='rounded-full bg-[#20444c] shadow-xl px-4 p-2 hover:scale-95 transition duration-700'
+                        >
+                            <p>
+                                {menuOption.text}
+                            </p>
+                        </a>
+                    ))
+                }
 
             </div>
+            <div className='text-[#20444c] hover:cursor p-1 shadow-lg rounded-lg flex xl:hidden'
+                onClick={() => { setOpenMenu(!openMenu) }}
+            >
+                <MenuIcon
+                    fontSize='large'
+                    color='inherit'
+                />
+            </div>
+            {/* Menu */}
+            {
+                openMenu && (
+                    <div className='absolute left-1 top-14 py-3 bg-white w-1/2'>
+                        {
+                            menuOptions.map((menuOption) => (
+                                <div className=' p-3 border '>
+                                    <a href={menuOption.link}>{menuOption.text}</a>
+                                </div>
+                            ))
+                        }
+                    </div>
+                )
+            }
+
         </div>
     )
 }

@@ -63,7 +63,7 @@ function ThirdScroll() {
                 <Link className=' my-4 rounded-full shadow-xl font-semibold h-11 w-auto px-5 space-x-2 flex items-center animate-pulse bg-white hover:scale-95 hover:cursor-pointer transition duration-700'
                     to="home"
                     smooth={true}
-                    duration={700}
+                    duration={900}
                 >
                     <ArrowUpwardIcon
                         fontSize='medium'
