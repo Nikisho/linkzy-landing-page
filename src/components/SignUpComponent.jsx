@@ -36,7 +36,7 @@ const SignUpComponent = () => {
     };
 
     return (
-        <div className='flex flex-col space-y-3 w-full md:px-1 xl:w-3/4'>
+        <div className='flex flex-col space-y-3 w-full px-3 md:px-0 xl:w-3/4'>
             {isSubmitted ? (
                 <div className='transition-opacity ease-in duration-700 font-sans text-green-600'>
                     Thank you for signing up! &#10003;
