@@ -44,14 +44,14 @@ const SignUpComponent = () => {
             ) : (
                 <div className={`flex items-center ${isSubmitting ? 'transition-opacity ease-in duration-700 opacity-0' : ''}`}>
                     <input
-                        className='h-10 w-2/3 border border-gray-400 p-4 rounded-l-xl'
-                        placeholder='example@gmail.com'
+                        className='h-10 w-2/3 border border-gray-400 p-4 rounded-l-lg'
+                        placeholder='Type your email...'
                         value={email}
                         onChange={handleInputChange}
                         disabled={isSubmitting}
                     />
                     <button
-                        className='h-10 w-1/3 rounded-r-xl bg-[#20444c] hover:scale-95 transition duration-700 font-bold font-sans text-lg text-white'
+                        className='h-10 w-1/3 rounded-r-lg bg-[#20444c] hover:scale-95 transition duration-700 font-sans text-lg text-white'
                         type='submit'
                         onClick={sendEmail}
                         disabled={isSubmitting}
