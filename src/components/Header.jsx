@@ -12,6 +12,10 @@ export default function Header() {
             link: '/deletedata.html',
             text: 'Delete your data'
         },
+        {
+            link:'/contactus.html',
+            text: 'Contact us'
+        }
     ]
     return (
         <div className='flex flex-row space-x-4 w-full  xl:px-10  items-center py-4 px-3 '>
