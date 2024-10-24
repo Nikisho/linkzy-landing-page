@@ -9,7 +9,7 @@ import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 function ThirdScroll() {
     const appBenefits = [
         {
-            mainContent: "Organize Meetups & Create Lasting Memories",
+            mainContent: "Organise Meetups for free & Create Lasting Memories",
             subContent: "Never miss out on a chance to bond with friends.",
             icon: <GroupsIcon fontSize='large' color='inherit' />
         },
