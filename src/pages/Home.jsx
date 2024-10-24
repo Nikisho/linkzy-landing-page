@@ -10,7 +10,7 @@ import {
 const Home = () => {
 	const [open, setOpen] = useState(false);
 	const IOSUrl = 'https://apps.apple.com/us/app/linkzy/id6720764102';
-	const AndroidUrl = '';
+	const AndroidUrl = 'https://play.google.com/store/apps/details?id=com.linkzy';
 	useEffect(() => {
 		const timer = setTimeout(() => setOpen(true), 500);
 		return () => clearTimeout(timer);
