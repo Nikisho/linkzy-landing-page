@@ -30,20 +30,21 @@ const Home = () => {
 								Download Linkzy and start making meaningful connections today.
 							</p>
 						</div>
-						<div className='flex space-x-5 my-8'>
+						<div className='flex my-8 items-center space-y-3 flex-col xl:flex-row xl:space-x-5 xl:space-y-0'>
 							<AppStoreButton
 								url={IOSUrl}
 								theme={"dark"}
-								className={"p-3"}
+								width={200}
+								className={"w-full"}
 							/>
 							<GooglePlayButton
 								url={AndroidUrl}
 								theme={"dark"}
-								className={"custom-style"}
+								width={200}
+								className={""}
 							/>
 						</div>
 					</Collapse>
-
 					{/* <SignUpComponent /> */}
 					<div className=' w-3/4 flex justify-start items-center px-3 xl:p-0'>
 
