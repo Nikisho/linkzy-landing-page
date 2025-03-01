@@ -89,10 +89,25 @@
         <h1>Payment Complete!</h1>
         <p>Your payment has been successfully processed.</p>
         <p>You may now close this page and return to the app.</p>
-        <button onclick="window.location.replace('com.linkzy://');">Return to App</button>
+        <button id="returnButton">Return to App</button>    
     </div>
 
     <script>
+        const returnButton = document.getElementById("returnButton");
+
+        returnButton.addEventListener("click", () => {
+            const customSchemeURL = 'com.linkzy://';
+            const fallbackURL = 'https://com.linkzy'; // Replace with your app's URL or App Store link
+
+            // Try opening the app using the custom scheme
+            window.location = customSchemeURL;
+
+            // Wait for 2 seconds to check if the app opened, if not, fallback to the URL
+            setTimeout(function () {
+                window.location = fallbackURL; // If the custom scheme doesn't open the app, go to the fallback URL
+            }, 2000);
+        });
+
         // Optional: Automatically redirect after 3 seconds
         setTimeout(function() {
             window.location.replace('com.linkzy://');
