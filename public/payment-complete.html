@@ -13,8 +13,8 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background-color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
             color: #333;
             display: flex;
             justify-content: center;
@@ -26,47 +26,46 @@
         }
 
         h1 {
-            font-size: 2rem;
-            color: #476b7d;
+            font-size: 2.5rem;
+            color: #2c3e50;
             margin-bottom: 20px;
+            font-weight: bold;
         }
 
         p {
             font-size: 1.2rem;
-            color: #476b7d;
+            color: #34495e;
             margin-bottom: 30px;
+            line-height: 1.6;
         }
 
         .container {
-            padding: 30px;
-            border-radius: 10px;
+            padding: 40px;
+            border-radius: 15px;
             width: 90%;
-            max-width: 400px;
-            color: #ffffff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: 10px;
+            backdrop-filter: blur(10px);
         }
 
-        button {
-            background-color: #ffffff;
-            color: #476b7d;
-            border: 2px solid #476b7d;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
+        .container p {
+            margin-bottom: 25px;
+        }
+
+        .footer {
+            font-size: 0.9rem;
+            color: #7f8c8d;
             margin-top: 20px;
-        }
-
-        button:hover {
-            background-color: #476b7d;
-            color: #ffffff;
+            opacity: 0.8;
         }
 
         /* Responsive Design */
         @media screen and (max-width: 600px) {
             h1 {
-                font-size: 1.5rem;
+                font-size: 2rem;
             }
 
             p {
@@ -74,11 +73,7 @@
             }
 
             .container {
-                padding: 20px;
-            }
-
-            button {
-                font-size: 0.9rem;
+                padding: 30px;
             }
         }
     </style>
@@ -89,25 +84,12 @@
         <h1>Payment Complete!</h1>
         <p>Your payment has been successfully processed.</p>
         <p>You may now close this page and return to the app.</p>
-        <button id="returnButton">Return to App</button>    
+        <div class="footer">
+            <p>Thank you for using our service!</p>
+        </div>
     </div>
 
     <script>
-        const returnButton = document.getElementById("returnButton");
-
-        returnButton.addEventListener("click", () => {
-            const customSchemeURL = 'com.linkzy://';
-            const fallbackURL = 'https://com.linkzy'; // Replace with your app's URL or App Store link
-
-            // Try opening the app using the custom scheme
-            window.location = customSchemeURL;
-
-            // Wait for 2 seconds to check if the app opened, if not, fallback to the URL
-            setTimeout(function () {
-                window.location = fallbackURL; // If the custom scheme doesn't open the app, go to the fallback URL
-            }, 2000);
-        });
-
         // Optional: Automatically redirect after 3 seconds
         setTimeout(function() {
             window.location.replace('com.linkzy://');
