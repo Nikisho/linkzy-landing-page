@@ -5,6 +5,7 @@ import EventIcon from '@mui/icons-material/Event';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { Link } from 'react-scroll';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import colours from '../_utils/colours/colours';
 
 function ThirdScroll() {
     const appBenefits = [
@@ -30,18 +31,22 @@ function ThirdScroll() {
         },
     ]
     return (
-        <div className='h-auto bg-[#76b5c5] flex flex-col justify-center xl:py-10'>
-            <div className='bg-white h-full xl:h-2/3 2xl:h-1/2 flex flex-col xl:flex-row '>
+        <div 
+            style={{backgroundColor: colours.primaryColour}}
+            className='h-auto  flex flex-col justify-center xl:py-10'>
+            <div className='bg-black h-full xl:h-2/3 2xl:h-1/2 flex flex-col xl:flex-row '>
                 <div className='w-full xl:w-1/2 '>
                     <img
                         src='static/scrollImages/thirdscrollmainimage.jpg'
                     />
                 </div>
                 {/* Promotional Copy */}
-                <div className='w-full xl:h-auto xl:w-2/3  flex flex-col justify-center px-5 py-5 xl:p-0'>
+                <div className='w-full xl:h-auto xl:w-2/3  text-white flex flex-col justify-center px-5 py-5 xl:p-0'>
                     {appBenefits.map((object) => (
                         <div className='my-2 flex xl:items-center space-x-5 xl:ml-8 '>
-                            <div className='p-3 rounded-lg bg-[#76b5c5] shadow-lg h-1/2 xl:h-auto'>
+                            <div 
+                                style={{backgroundColor: colours.primaryColour}}
+                                className='p-3 rounded-lg text-black shadow-lg h-1/2 xl:h-auto'>
                                 {object.icon}
                             </div>
                             <div>
