@@ -17,16 +17,16 @@
 
         // Fallback after a few seconds if deep link fails
         setTimeout(() => {
-        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-          window.location.href = "https://apps.apple.com/us/app/linkzy/id6720764102";
-        }
-        // Android
-        else if (/android/i.test(userAgent)) {
-          window.location.href = "https://play.google.com/store/apps/details?id=com.linkzy";
-        }
-        else {
-          document.getElementById('fallback').style.display = 'block';
-        }
+          if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            window.location.href = "https://apps.apple.com/us/app/linkzy/id6720764102";
+          }
+          // Android
+           if (/android/i.test(userAgent)) {
+            window.location.href = "https://play.google.com/store/apps/details?id=com.linkzy";
+          }
+          else {
+            document.getElementById('fallback').style.display = 'block';
+          }
         }, 3000);
       } else {
         document.getElementById('error').style.display = 'block';
