@@ -3,6 +3,7 @@ import GroupsIcon from '@mui/icons-material/Groups';
 import ChatIcon from '@mui/icons-material/Chat';
 import EventIcon from '@mui/icons-material/Event';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import RsvpIcon from '@mui/icons-material/Rsvp';
 import { Link } from 'react-scroll';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import colours from '../_utils/colours/colours';
@@ -25,9 +26,9 @@ function ThirdScroll() {
             icon: <EventIcon fontSize='large' color='inherit' />
         },
         {
-            mainContent: "Like & Comment on Events",
-            subContent: "Engage with the community and make your voice heard.",
-            icon: <FavoriteIcon fontSize='large' color='inherit' />
+            mainContent: "Manage RSVPs",
+            subContent: "Track attendee responses and stay updated on who’s coming to your events.",
+            icon: <RsvpIcon fontSize='large' color='inherit' />
         },
     ]
     return (
