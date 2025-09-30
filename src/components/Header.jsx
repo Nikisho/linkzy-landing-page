@@ -9,6 +9,10 @@ export default function Header() {
             text: 'Privacy policy'
         },
         {
+            link: '/termsofservices.html',
+            text: 'Terms of services'
+        },
+        {
             link: '/deletedata.html',
             text: 'Delete your data'
         },
@@ -25,13 +29,13 @@ export default function Header() {
                     <strong>Linkzy</strong>
                 </h1>
             </div>
-            <div className='hidden xl:flex flex-row space-x-4 items-center text-white font-semibold justify-end w-full'>
+            <div className='hidden xl:flex flex-row space-x-3 items-center text-white font-semibold justify-end w-full'>
 
                 {
                     menuOptions.map((menuOption) => (
                         <a
                             href={menuOption.link}
-                            className='rounded-full bg-black shadow-xl px-4 p-2 hover:scale-95 transition duration-700'
+                            className='rounded-full bg-black shadow-xl px-4 p-1 hover:scale-95 transition duration-700'
                         >
                             <p>
                                 {menuOption.text}
