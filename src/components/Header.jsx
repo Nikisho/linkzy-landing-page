@@ -10,7 +10,7 @@ export default function Header() {
         },
         {
             link: '/termsofservices.html',
-            text: 'Terms of services'
+            text: 'Terms and conditions'
         },
         {
             link: '/deletedata.html',
