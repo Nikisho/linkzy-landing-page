@@ -56,6 +56,8 @@
     const eventId = params.get('featured_event_id');
     if (eventId) {
       document.getElementById('manualLink').href = `com.linkzy://featuredeventsevent?featured_event_id=${eventId}`;
+    } else {
+      document.getElementById('manualLink').href = `com.linkzy://`;
     }
   </script>
 </body>
